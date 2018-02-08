@@ -22,4 +22,8 @@ def server_static(filename):
 def frett(id):
     return template(id)
 
+@error(404)
+def error404(error):
+    return "<h1>Þessi síða fannst ekki</h1>"
+
 run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
